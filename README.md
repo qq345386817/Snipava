@@ -21,7 +21,7 @@ python3 build.py --origin https://snipava.luopeike.com --support-email cameoshel
 
 This build includes the sitemap, canonical URLs, locale alternates and the public support address on each Help page. The Cloudflare redirect for `snipava.pages.dev` preserves the requested path and query. The production sitemap is at `https://snipava.luopeike.com/sitemap.xml`.
 
-Files in `public/` are served at the site root. Keep the Google Search Console and Bing Webmaster Tools ownership verification files at their original paths.
+Google Search Console uses a verification tag on the production homepage. Bing Webmaster Tools uses the XML file in `public/`, which is served at the site root. Keep both proofs in future deployments.
 
 ## Update translations and assets
 

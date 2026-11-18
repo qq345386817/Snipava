@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent
 MANIFEST = json.loads((ROOT / "content/locales.json").read_text())
 DEFAULT = MANIFEST["default"]
 PAGES = ("home", "help", "privacy")
+PRODUCTION_ORIGIN = "https://snipava.luopeike.com"
 NOT_FOUND = """<!doctype html>
 <html lang="en-US">
 <head>
@@ -64,6 +65,10 @@ def page_html(language, copy, page, origin, support_email):
         canonical = f'<link rel="canonical" href="{origin}{here}">{alternates}'
     else:
         canonical = ""
+    verification = ""
+    if page == "home" and locale == DEFAULT and origin == PRODUCTION_ORIGIN:
+        token = (ROOT / "content/google-verification.txt").read_text().strip()
+        verification = f'<meta name="google-site-verification" content="{escape(token)}">'
     if page == "home":
         cards = "".join(
             f'<article><h3>{t(key)}</h3><p>{t(key + "_copy")}</p></article>'
@@ -114,6 +119,7 @@ def page_html(language, copy, page, origin, support_email):
 <meta name="description" content="{t(intro[page])}">
 <title>{t(title[page])} | Snipava</title>
 {canonical}
+{verification}
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 </head>
