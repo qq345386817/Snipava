@@ -21,6 +21,8 @@ python3 build.py --origin https://snipava.luopeike.com --support-email cameoshel
 
 This build includes the sitemap, canonical URLs, locale alternates and the public support address on each Help page. The Cloudflare redirect for `snipava.pages.dev` preserves the requested path and query. The production sitemap is at `https://snipava.luopeike.com/sitemap.xml`.
 
+Files in `public/` are served at the site root. Keep the Google Search Console and Bing Webmaster Tools ownership verification files at their original paths.
+
 ## Update translations and assets
 
 Update `content/copy.json` with a complete entry for each language. `content/locales.json` should match `Resources/Localization/locales.json` in the separate Snipava app checkout. Assets are served locally. The home page uses a real Snipava workspace capture with a synthetic sample. Store screenshot output lives in the app repository's ignored `.local/` directory.

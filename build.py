@@ -153,6 +153,9 @@ def main():
     default_keys = translations[DEFAULT].keys()
     output = ROOT / "dist"
     output.mkdir(exist_ok=True)
+    public = ROOT / "public"
+    if public.is_dir():
+        shutil.copytree(public, output, dirs_exist_ok=True)
     shutil.copytree(ROOT / "assets", output / "assets", dirs_exist_ok=True)
     urls = []
     for language in MANIFEST["languages"]:
