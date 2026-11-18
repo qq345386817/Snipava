@@ -1,0 +1,16 @@
+{
+  "default": "en-US",
+  "languages": [
+    { "id": "en-US", "store": "en-US", "name": "English (US)", "region": "en_US", "direction": "ltr" },
+    { "id": "zh-Hans", "store": "zh-Hans", "name": "简体中文", "region": "zh_CN", "direction": "ltr" },
+    { "id": "zh-Hant", "store": "zh-Hant", "name": "繁體中文", "region": "zh_TW", "direction": "ltr" },
+    { "id": "es", "store": "es-ES", "name": "Español", "region": "es_ES", "direction": "ltr" },
+    { "id": "ja", "store": "ja", "name": "日本語", "region": "ja_JP", "direction": "ltr" },
+    { "id": "ko", "store": "ko", "name": "한국어", "region": "ko_KR", "direction": "ltr" },
+    { "id": "fr", "store": "fr-FR", "name": "Français", "region": "fr_FR", "direction": "ltr" },
+    { "id": "de", "store": "de-DE", "name": "Deutsch", "region": "de_DE", "direction": "ltr" },
+    { "id": "ar", "store": "ar-SA", "name": "العربية", "region": "ar_SA", "direction": "rtl" },
+    { "id": "hi", "store": "hi", "name": "हिन्दी", "region": "hi_IN", "direction": "ltr" },
+    { "id": "ru", "store": "ru", "name": "Русский", "region": "ru_RU", "direction": "ltr" }
+  ]
+}
